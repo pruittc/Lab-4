@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#DC4404;}
+	.st1{fill:#DCDBDB;}
+	.st2{fill:#84AEC8;}
+	.st3{fill:#DC4404;stroke:#DC4404;}
+	.st4{font-family:'ArialMT';}
+	.st5{font-size:12px;}
+	.st6{fill:#DCDBDB;stroke:#DCDBDB;}
+	.st7{fill:#84AEC8;stroke:#84AEC8;}
+</style>
+<g transform="translate(200 200)">
+	<path class="st0" d="M0-200c12.7,0,25.3,1.2,37.7,3.6l-14.1,73.6C15.8-124.3,7.9-125,0-125V-200z"/>
+	<path class="st1" d="M37.7-196.4C146.2-175.6,217.2-70.8,196.4,37.7S70.8,217.2-37.7,196.4S-217.2,70.7-196.4-37.7
+		c1.6-8.5,3.8-16.9,6.6-25.2l71.2,23.6c-21.7,65.5,13.8,136.2,79.3,157.9s136.2-13.8,157.9-79.4S104.8-97,39.3-118.7
+		c-5.1-1.7-10.4-3.1-15.7-4.1L37.7-196.4z"/>
+	<path class="st2" d="M-189.8-62.9C-162.7-144.7-86.2-200,0-200v75c-53.9,0-101.7,34.5-118.6,85.7L-189.8-62.9z"/>
+	<g transform="translate(-36 -33)">
+		<rect x="0" y="0" class="st3" width="18" height="18"/>
+		<text transform="matrix(0.9998 0 0 1 22.003 13.9829)" class="st4 st5">Swim (in miles)</text>
+	</g>
+	<g transform="translate(-36 -11)">
+		<rect x="0" y="0" class="st6" width="18" height="18"/>
+		<text transform="matrix(0.9998 0 0 1 22.003 13.9805)" class="st4 st5">Bike (in miles)</text>
+	</g>
+	<g transform="translate(-36 11)">
+		<rect x="0" y="0" class="st7" width="18" height="18"/>
+		<text transform="matrix(0.9998 0 0 1 22.003 13.9785)" class="st4 st5">Run (in miles)</text>
+	</g>
+</g>
+</svg>
