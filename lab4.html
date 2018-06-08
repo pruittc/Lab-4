@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" rel="stylesheet" data-semver="3.0.1" data-require="normalize@*" />
+</head>
+
+<h1>Sprint Triathlon</h1>
+
+<style>
+    .legend {
+        font-size: 13px;
+    }
+    h1 {
+        font-size: 15px;
+        text-align: center;
+    }
+    rect {
+        stroke-width: 20px;
+    }
+    #chart {
+        height: 400px;
+        margin: 30px 20px 30px 20px;
+        position: relative;
+        width: 400px;
+    }
+    .svg {
+        box-shadow: 0 0 5px #999999;
+        display: none;
+        font-size: 12px;
+        left: 130px;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+        top: 95px;
+        width: 80px;
+        z-index: 10;
+        line-height: 140%; /*Interlineado*/
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+            background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 2px;
+    }
+
+    .label {
+        font-weight: 600;
+    }
+</style>:
+
+<body>
+<div id="chart"></div>
+<script data-require="d3@*" data-semver="4.0.0" src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+    (function(d3) {
+        'use strict';
+
+        var tooltip = d3.select('#chart')
+            .append('div')
+            .attr('class', 'tooltip');
+
+        tooltip.append('div')
+            .attr('class', 'label');
+
+        tooltip.append('div')
+            .attr('class', 'count');
+
+        tooltip.append('div')
+            .attr('class', 'percent');
+
+        var dataset = [
+            {class: "Swim", value: 750},
+            {class: "Bike", value: 12},
+            {class: "Run", value: 3.1},
+        ];
+
+        var width = 360;
+        var height = 360;
+        var radius = Math.min(width, height) / 2;
+
+        var color = d3.scaleOrdinal().range(["red", "green", "blue", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+        var svg = d3.select('#chart')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height)
+            .append('g')
+            .attr('transform', 'translate(' + (width / 2) +
+                ',' + (height / 2) + ')');
+
+        var donutWidth = 75;
+
+        var arc = d3.arc()
+            .innerRadius(radius - donutWidth)
+            .outerRadius(radius);
+
+        var pie = d3.pie()
+            .value(function(d) { return d.value; })
+            .sort(null);
+
+        var legendRectSize = 20;
+        var legendSpacing = 15;
+
+	        var path = svg.selectAll('path')
+		        .data(pie(dataset))
+		        .enter()
+		        .append('path')
+		        .attr('d', arc)
+		        .attr('fill', function(d, i) {
+			        return color(d.data.class);
+
+		        });
+
+	        path.on('mouseover', function(d) {
+		        var total = d3.sum(dataset.map(function(d) {
+			        return d.value;
+		        }));
+		        var percent = Math.round(1000 * d.data.value / total) / 140.6;
+		        tooltip.select('.label').html(d.data.class);
+            tooltip.select('.count').html(d.data.value);
+            tooltip.select('.percent').html(percent + '%');
+            tooltip.style('display', 'block');
+        });
+
+        path.on('mouseout', function() {
+            tooltip.style('display', 'none');
+        });
+
+        var legend = svg.selectAll('.legend')
+            .data(color.domain())
+            .enter()
+            .append('g')
+            .attr('class', 'legend')
+            .attr('transform', function(d, i) {
+                var height = legendRectSize + legendSpacing;
+                var offset =  height * color.domain().length / 2;
+                var horz = -2 * legendRectSize;
+                var vert = i * height - offset;
+                return 'translate(' + horz + ',' + vert + ')';
+            });
+
+        legend.append('rect')
+            .attr('width', legendRectSize)
+            .attr('height', legendRectSize)
+            .style('fill', color)
+            .style('stroke', color);
+
+        legend.append('text')
+            .attr('x', legendRectSize + legendSpacing)
+            .attr('y', legendRectSize - legendSpacing)
+            .text(function(d) { return d; });
+
+    })(window.d3);
+</script>
+</body>
+
+</html>
