@@ -3,4 +3,4 @@ This is a pie chart that can be used for many different statistic vizualizations
 
 The first part of the coding is choosing the the font, dimensions, sizing, and color of the slice and line and radius.
 Next, we state the colors and labels we want. In this case we're randomizing the slice size because I didn't actually put data in it.
-![Alt text](img/image.jpeg)
+![Alt text](/img/image.jpg)
