@@ -13,4 +13,6 @@ After the styling is made for the chart and the svg file, I write a line of code
 Next, we are adding data to the categories by saying what we want the labels to be be, and their value. then we are setting the perimeters for the chart and telling it how to calculate the radius. A color scheme is choosen and then specific colors within the scheme are chosen. Next the svg is getting data to know which categories it needs to make and how to calculate the chart size, donut width, and arc radii.
 ![Alt text](/img/3.JPG)
 
-
+The mouseover is getting more data on what info is shown and how the percent is calculated and displayed.The legend is getting more data added to it. It's being assigned perimeters, spacing, and what it needs to show and how the size is calculated with math from different
+ categories. Then it's making sure that certain things about about the chart had the right color, stroke width, and sizing.
+ ![Alt text](/img/4.JPG)
