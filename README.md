@@ -14,5 +14,5 @@ Next, we are adding data to the categories by saying what we want the labels to 
 ![Alt text](/img/3.JPG)
 
 The mouseover is getting more data on what info is shown and how the percent is calculated and displayed.The legend is getting more data added to it. It's being assigned perimeters, spacing, and what it needs to show and how the size is calculated with math from different
- categories. Then it's making sure that certain things about about the chart had the right color, stroke width, and sizing.
+ categories. Then it's making sure that certain things about about the chart had the right color, stroke width, and sizing. 
  ![Alt text](/img/4.JPG)
