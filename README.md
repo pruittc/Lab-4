@@ -8,7 +8,7 @@ The first section of the code is doing the styling choices for the entire chart.
 ![Alt text](/img/1.jpg)
 
 After the styling is made for the chart and the svg file, I write a line of code to specifiy which library and version along with which source I want to use for that specific chart type. I want to make a window pop-up that contains more information about the section when a mouse is hovering over a section of the donut chart, which is what the tooltip function is used for. I'm telling it the categories or classes I want shown in the popup window. The classes are label, count, and percent.
-![Alt text](/img/2.jpg)
+![Alt text](/img/2.JPG)
 
 Next, we state the colors and labels we want. In this case we're randomizing the slice size because I didn't actually put data in it.
 
