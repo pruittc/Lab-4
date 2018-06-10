@@ -10,5 +10,7 @@ The first section of the code is doing the styling choices for the entire chart.
 After the styling is made for the chart and the svg file, I write a line of code to specifiy which library and version along with which source I want to use for that specific chart type. I want to make a window pop-up that contains more information about the section when a mouse is hovering over a section of the donut chart, which is what the tooltip function is used for. I'm telling it the categories or classes I want shown in the popup window. The classes are label, count, and percent.
 ![Alt text](/img/2.JPG)
 
-Next, we state the colors and labels we want. In this case we're randomizing the slice size because I didn't actually put data in it.
+Next, we are adding data to the categories by saying what we want the labels to be be, and their value. then we are setting the perimeters for the chart and telling it how to calculate the radius. A color scheme is choosen and then specific colors within the scheme are chosen. Next the svg is getting data to know which categories it needs to make and how to calculate the chart size, donut width, and arc radii.
+![Alt text](/img/3.JPG)
+
 
